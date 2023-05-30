@@ -91,5 +91,9 @@ Many thanks to the works:
 
 [pycocoevalcap](https://github.com/salaniz/pycocoevalcap.git)
 
+[dataset: flickr30k: https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset]
+
+[dataset: coco2014, coco2017: https://cocodataset.org/#download]
+
 
 
