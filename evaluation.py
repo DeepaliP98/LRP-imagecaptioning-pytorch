@@ -772,7 +772,7 @@ class EvaluationExperimentsAOA(object):
 
 
 
-def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_idx=None, dataset='coco2017', do_attention=True):
+def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_idx=None, dataset='flickr30k', do_attention=True):
 
     if model_type == 'gridTD':
         parser = imgcap_gridTD_argument_parser()
@@ -1001,7 +1001,7 @@ def analyze_ablation(model_type):
         # row_list.append([explanation_type] + score_pos.tolist())
 
         print(row_list)
-    with open(os.path.join(args.save_path, args.encoder, 'coco2017/evaluation/ablation/', model_type+'_ablation.csv'), 'w') as f:
+    with open(os.path.join('E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\output\\gridTD\\vgg16\\coco2017\\evaluation\\ablation\\', model_type+'_ablation.csv'), 'w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerows(row_list)
 
@@ -1222,6 +1222,7 @@ def analyze_TPFP_20(model_type):
                     if item['mean'] == "nan":
                         continue
                     else:
+
                         statistics[word]['mean'] = np.minimum(statistics[word]['mean'],float(item['mean']))
                     if item['max'] == 'nan':
                         continue
@@ -1542,11 +1543,11 @@ if __name__ == '__main__':
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-    # generate_evaluation_files('gridTD', explainer_type='lrp', dataset='flickr30k', do_attention=True)
-    # generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
-    # generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
-    # generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
-    # generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)
+    generate_evaluation_files('gridTD', explainer_type='lrp', dataset='flickr30k', do_attention=True)
+    generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
+    generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
+    generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
+    generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='lrp', do_attention=True)
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GradCam', do_attention=False)
@@ -1562,8 +1563,8 @@ if __name__ == '__main__':
     # generate_evaluation_files('aoa', explainer_type='GuidedGradient', do_attention=False)
     # generate_evaluation_files('aoa', explainer_type='Gradient', do_attention=False)
 
-    # analyze_ablation('gridTD')
-    analyze_TPFP_20('gridTD')
+    analyze_ablation('gridTD')
+    # analyze_TPFP_20('gridTD')
     # analyze_bbox('gridTD')
     # analyze_ablation_aoa()
     # process_multihead_attention_bbox_aoa()
@@ -1572,9 +1573,9 @@ if __name__ == '__main__':
     '''observe the frequent words of the test set'''
     # predicted_file = './output/gridTD_BU_cideropt/vgg16/cocorobust/reference_cocorobust_split_test_beam_search_3.yaml'
     # predicted_file = './output/gridTD_BU_cideropt/vgg16/coco2017/predictions_coco2017_split_test_beam_search_3_epoch13.yaml'
-    # predicted_file = './output/gridTD_BU_cideropt/vgg16/flickr30k/predictions_flickr30k_split_test_beam_search_3_epoch34.yaml'
-    # observe_frequent_words(predicted_file,0)
-    # ground_truth_work_frequency('flickr30k')
+    predicted_file = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\output\\gridTD_BU\\vgg16\\flickr30k\\predictions_flickr30k_split_test_beam_search_3_epoch8.yaml'
+    observe_frequent_words(predicted_file,0)
+    ground_truth_work_frequency('flickr30k')
 
     '''calculate map'''
 

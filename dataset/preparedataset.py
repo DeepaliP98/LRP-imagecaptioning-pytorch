@@ -162,9 +162,11 @@ def create_input_files(dataset, karpathy_json_path, image_folder, captions_per_i
 
     # Sample captions for each image, save images to HDF5 file, and captions and their lengths to JSON files
     seed(123)
-    for impaths, imcaps, split in [(train_image_paths, train_image_captions, 'train'),
-                                   (val_image_paths, val_image_captions, 'val'),
-                                   (test_image_paths, test_image_captions, 'test')]:
+    # for impaths, imcaps, split in [(train_image_paths, train_image_captions, 'train'),
+    #                                (val_image_paths, val_image_captions, 'val'),
+    #                                (test_image_paths, test_image_captions, 'test')]:
+    for impaths, imcaps, split in [ (val_image_paths, val_image_captions, 'val'),
+                                       (test_image_paths, test_image_captions, 'test')]:
         imgcapdata = []
         for i, path in enumerate(tqdm(impaths)):
             # print(path)
@@ -475,8 +477,8 @@ def generate_coco2017_jsonfile():
     dataset = {}
     dataset['dataset'] = 'coco2017'
     dataset['images'] = []
-    annotation_train_file_path = '/home/sunjiamei/work/ImageCaptioning/dataset/coco/annotations/captions_train2017.json'
-    annotation_val_file_path = '/home/sunjiamei/work/ImageCaptioning/dataset/coco/annotations/captions_val2017.json'
+    annotation_train_file_path = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\annotations_trainval2017\\annotations\\captions_train2017.json'
+    annotation_val_file_path = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\annotations_trainval2017\\annotations\\captions_val2017.json'
     coco_anns_train = json.load(open(annotation_train_file_path, 'r')) # keys are info, licenses, images, annotations  118287
     tokenizer = nltk.RegexpTokenizer(r"\w+")
     # new_words = tokenizer.tokenize(sentence)
@@ -554,6 +556,89 @@ def generate_coco2017_jsonfile():
     with open('./dataset_coco2017.json', 'w') as f:
         json.dump(dataset, f)
 
+def generate_coco2014_jsonfile():
+    dataset = {}
+    dataset['dataset'] = 'coco2014'
+    dataset['images'] = []
+    annotation_train_file_path = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\annotations_trainval2014\\annotations\\captions_train2014.json'
+    annotation_val_file_path = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\annotations_trainval2014\\annotations\\captions_val2014.json'
+    coco_anns_train = json.load(open(annotation_train_file_path, 'r')) # keys are info, licenses, images, annotations  118287
+    tokenizer = nltk.RegexpTokenizer(r"\w+")
+    # new_words = tokenizer.tokenize(sentence)
+    # under annotations, keys are  image_id, id(the sentence id), caption
+    # under images, the keys are license, file_name, coco_url, height, width, data_captured, flickr_url id
+    imgID2captions_train = defaultdict(dict)
+    imgID2imgFilename_path_train = defaultdict(dict)
+    for ann in coco_anns_train['annotations']:
+        caption_str = ann['caption'].lower()
+        tokens = tokenizer.tokenize(caption_str)
+        # print(tokens)
+        if not 'sentids' in imgID2captions_train[ann['image_id']].keys():
+            imgID2captions_train[ann['image_id']]['sentids'] = []
+            imgID2captions_train[ann['image_id']]['sentences'] = []
+        imgID2captions_train[ann['image_id']]['sentids'].append(ann['id'])
+        imgID2captions_train[ann['image_id']]['sentences'].append({'tokens':tokens, 'raw': caption_str, 'imgid': ann['image_id'],
+                                                             'sentid': ann['id']})
+    for img in coco_anns_train['images']:
+        imgID2imgFilename_path_train[img['id']]['filename'] = img['file_name']
+        imgID2imgFilename_path_train[img['id']]['filepath'] = 'coco2014'
+    imgID2imgFilename_path_train = dict(imgID2imgFilename_path_train)
+    imgID2captions_train = dict(imgID2captions_train)
+    img_ids_trainval = list(imgID2captions_train.keys())
+    img_ids_trainval.sort()
+
+    coco_anns_val = json.load(open(annotation_val_file_path, 'r'))
+    imgID2captions_val = defaultdict(dict)
+    imgID2imgFilename_path_val = defaultdict(dict)
+    for ann in coco_anns_val['annotations']:
+        caption_str = ann['caption'].lower()
+        tokens = tokenizer.tokenize(caption_str)
+        # print(tokens)
+        if not 'sentids' in imgID2captions_val[ann['image_id']].keys():
+            imgID2captions_val[ann['image_id']]['sentids'] = []
+            imgID2captions_val[ann['image_id']]['sentences'] = []
+        imgID2captions_val[ann['image_id']]['sentids'].append(ann['id'])
+        imgID2captions_val[ann['image_id']]['sentences'].append({'tokens':tokens, 'raw': caption_str, 'imgid': ann['image_id'],
+                                                             'sentid': ann['id']})
+    for img in coco_anns_val['images']:
+        imgID2imgFilename_path_val[img['id']]['filename'] = img['file_name']
+        imgID2imgFilename_path_val[img['id']]['filepath'] = 'val2014'
+    imgID2imgFilename_path_val = dict(imgID2imgFilename_path_val)
+    imgID2captions_val = dict(imgID2captions_val)
+    img_ids_test= list(imgID2captions_val.keys())
+
+
+    for i in range(len(img_ids_trainval)):
+        if i <80000:
+            split = 'train'
+        else:
+            split = 'val'
+        img_id = img_ids_trainval[i]
+        dataunit = {}
+        dataunit["filepath"] = imgID2imgFilename_path_train[img_id]['filepath']
+        dataunit["filename"] = imgID2imgFilename_path_train[img_id]['filename']
+        dataunit["sentids"] = imgID2captions_train[img_id]['sentids']
+        dataunit["sentences"] = imgID2captions_train[img_id]['sentences']
+        dataunit["imgid"] = img_id
+        dataunit["cocoid"] = img_id
+        dataunit["split"] = split
+        dataset['images'].append(dataunit)
+
+    for i in range(len(img_ids_test)):
+        split = 'test'
+        img_id = img_ids_test[i]
+        dataunit = {}
+        dataunit["filepath"] = imgID2imgFilename_path_val[img_id]['filepath']
+        dataunit["filename"] = imgID2imgFilename_path_val[img_id]['filename']
+        dataunit["sentids"] = imgID2captions_val[img_id]['sentids']
+        dataunit["sentences"] = imgID2captions_val[img_id]['sentences']
+        dataunit["imgid"] = img_id
+        dataunit["cocoid"] = img_id
+        dataunit["split"] = split
+        dataset['images'].append(dataunit)
+    with open('./dataset_coco2014.json', 'w') as f:
+        json.dump(dataset, f)
+
 
 def generate_coco2017_data():
     '''
@@ -565,7 +650,7 @@ def generate_coco2017_data():
     '''
     dataset = 'coco2017'
     json_path = 'dataset_coco2017.json'
-    image_folder = '/home/sunjiamei/work/ImageCaptioning/dataset/coco/images'
+    image_folder = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\coco\\images'
     caption_per_img = 5
     min_freq_word = 4
     create_input_files(dataset, karpathy_json_path=json_path, image_folder=image_folder,
@@ -582,7 +667,7 @@ def generate_flickr30k_data():
     '''
     dataset = 'flickr30k'
     json_path = 'dataset_flickr30k.json'
-    image_folder = '/home/sunjiamei/work/ImageCaptioning/dataset/flickr30k/Flickr30k_Dataset'
+    image_folder = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\flickr30k_images\\flickr30k_images\\flickr30k_images\\flickr30k_images'
     caption_per_img = 5
     min_freq_word = 3
     create_input_files(dataset, karpathy_json_path=json_path, image_folder=image_folder,
@@ -598,8 +683,8 @@ def generate_coco2014_data():
     :return:
     '''
     dataset = 'coco2014'
-    json_path = 'dataset_coco.json'
-    image_folder = '/home/sunjiamei/work/ImageCaptioning/dataset/coco/images'
+    json_path = 'dataset_coco2014.json'
+    image_folder = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\coco2014'
     caption_per_img = 5
     min_freq_word = 4
     create_input_files(dataset, karpathy_json_path=json_path, image_folder=image_folder,
@@ -616,7 +701,7 @@ def generate_coco2014_held_out_data():
     '''
     dataset = 'coco2014_held_out'
     json_path = 'dataset_coco.json'
-    image_folder = '/home/sunjiamei/work/ImageCaptioning/dataset/coco/images'
+    image_folder = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\coco2014'
     held_out_lists_folder = './image_list'
     caption_per_img = 5
     min_freq_word = 4
@@ -626,7 +711,7 @@ def generate_coco2014_held_out_data():
 
 def generate_robust_coco():
     json_path = 'dataset_coco.json'
-    image_folder = '/home/sunjiamei/work/ImageCaptioning/dataset/coco/images'
+    image_folder = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\coco\\images'
     caption_per_img = 5
     min_freq_word = 4
     create_input_robust_coco(karpathy_json_path=json_path, image_folder=image_folder, captions_per_image=caption_per_img, min_word_freq=min_freq_word, max_len=50)
@@ -640,8 +725,8 @@ def copy_bu_features_robust_coco():
             id_list.append(item['img_id'])
         assert len(id_list) == len(data_list)
         return list(set(id_list))
-    root_dir = '/home/sunjiamei/work/ImageCaptioning/dataset/cocorobust_bu_feature'
-    coco_2014_bu_dir = '/home/sunjiamei/work/ImageCaptioning/dataset/coco2014_bu_features'
+    root_dir = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\cocorobust_bu_feature'
+    coco_2014_bu_dir = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\dataset\\coco2014_bu_features'
     train_dir = os.path.join(root_dir, 'train')
     test_dir = os.path.join(root_dir, 'test')
     val_dir = os.path.join(root_dir, 'val')
@@ -680,12 +765,12 @@ def copy_bu_features_robust_coco():
             continue
 
 
-
-# if __name__ == '__main__':
+if __name__ == '__main__':
     # generate_flickr30k_data()
-    # generate_coco2014_data()
-    # generate_coco2017_jsonfile()
-    # generate_coco2017_data()
-    # generate_coco2014_held_out_data()
-    # generate_robust_coco()
-    # copy_bu_features_robust_coco()
+    # generate_coco2014_jsonfile()
+    generate_coco2014_data()
+    generate_coco2017_jsonfile()
+    generate_coco2017_data()
+    generate_coco2014_held_out_data()
+    generate_robust_coco()
+    copy_bu_features_robust_coco()
