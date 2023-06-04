@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 
 
 def download_image(url, file_path, file_name):
@@ -10,6 +11,7 @@ def download_image(url, file_path, file_name):
 
 
 if __name__ == '__main__':
+    os.mkdir(os.getcwd()+"/images")
     data = json.load(open("memes.json", "r"))
     meme_local_dataset = []
     for image in data:
