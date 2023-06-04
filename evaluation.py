@@ -1562,7 +1562,7 @@ if __name__ == '__main__':
     # generate_evaluation_files('aoa', explainer_type='GuidedGradient', do_attention=False)
     # generate_evaluation_files('aoa', explainer_type='Gradient', do_attention=False)
 
-    # analyze_ablation('gridTD')
+    analyze_ablation('gridTD')
     analyze_TPFP_20('gridTD')
     # analyze_bbox('gridTD')
     # analyze_ablation_aoa()
