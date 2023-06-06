@@ -714,7 +714,7 @@ class ExplainGridTDAttention(object):
             self.model = model
         else:
             self.model = GridTDModel(args.embed_dim, args.hidden_dim, len(word_map), args.encoder)
-            checkpoint = torch.load(args.weight)
+            checkpoint = torch.load(args.weight, map_location=torch.device('cpu'))
             self.model.load_state_dict(checkpoint['state_dict'])
             self.model.cuda()
         self.model.eval()

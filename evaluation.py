@@ -492,7 +492,7 @@ class EvaluationExperiments(object):
                                                                      multichannel=False)
                         attention_quantile = np.quantile(attention,quantile_point)
                         attention_quantile_list = [str(item) for item in attention_quantile]
-                    # print(relevance_img_tp.shape)
+                    print(relevance_img_tp.shape)
                     if explanation_type == 'GradCam':
                         gradcam_size = int(np.sqrt(relevance_img_tp.shape[1]))
                         scale = int(self.explainer.args.height // gradcam_size)
@@ -781,7 +781,7 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
             args.weight = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]  # 22
         else:
             args.weight = glob.glob('./output/gridTD/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch28*')[0]
-        args.dataset = dataset
+        args.dataset = 'flickr30k'
         word_map_path = f'./dataset/wordmap_{args.dataset}.json'
         word_map = json.load(open(word_map_path, 'r'))
     elif model_type == 'aoa':
@@ -800,14 +800,18 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
     if dataset == 'coco2017':
         data_file = json.load(open('./dataset/test_imagecap_coco2017_5_cap_per_img_4_min_word_freq.json', 'r'))
         category_dict = json.load(open('./dataset/COCOvalEntities.json'))
+    elif dataset == 'memes':
+        data_file = json.load(open('./dataset/test_imagecap_memes_5_cap_per_img_4_min_word_freq.json', 'r'))
+        print("meme here")
     else:
         data_file = json.load(open('./dataset/test_imagecap_flickr30k_5_cap_per_img_3_min_word_freq.json', 'r'))
 
     for i in range(len(data_file)):
         # print(i)
         img_filename = data_file[i]['image_path'].split('/')[-1]
-        if img_filename != '000000015746.jpg':
-            continue
+        print(img_filename)
+        #if img_filename != '000000015746.jpg':
+        #    continue
         if model_type == 'aoa':
             if 'lrp' in explainer_type:
                 explainer = aoamodel.ExplainAOAAttention(args, word_map)
@@ -823,8 +827,10 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
                 raise NotImplementedError('no such explainer_type')
             evaluation_engin = EvaluationExperimentsAOA(explainer=explainer)
         elif model_type == 'gridTD':
+            print('gridTD')
             if 'lrp' in explainer_type:
                 explainer = gridTDmodel.ExplainGridTDAttention(args, word_map)
+                print("explainer: ", explainer)
             elif 'GuidedGradCam' in explainer_type:
                 explainer =  gridTDmodel.ExplainGridTDGuidedGradCam(args, word_map)
             elif explainer_type == 'GradCam':
@@ -842,6 +848,9 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
         save_path_bbox = os.path.join(args.save_path, args.encoder, args.dataset, 'evaluation/bbox/', explanation_type)
         save_path_ablation = os.path.join(args.save_path, args.encoder, args.dataset, 'evaluation/ablation/', explanation_type)
         save_path_tpfp = os.path.join(args.save_path, args.encoder, args.dataset, 'evaluation/tpfp/', explanation_type)
+        print("save_path_bbox: ", save_path_bbox)
+        print("save_path_ablation: ", save_path_ablation)
+        print("save_path_tpfp:", save_path_tpfp)
         if not os.path.isdir(save_path_ablation):
             os.makedirs(save_path_ablation)
         if not os.path.isdir(save_path_bbox):
@@ -1543,11 +1552,11 @@ if __name__ == '__main__':
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-    generate_evaluation_files('gridTD', explainer_type='lrp', dataset='flickr30k', do_attention=True)
-    generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
-    generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
-    generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
-    generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)
+    generate_evaluation_files('gridTD', explainer_type='lrp', dataset='memes', do_attention=True)
+    # generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
+    # generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
+    # generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
+    # generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='lrp', do_attention=True)
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GradCam', do_attention=False)
@@ -1563,7 +1572,7 @@ if __name__ == '__main__':
     # generate_evaluation_files('aoa', explainer_type='GuidedGradient', do_attention=False)
     # generate_evaluation_files('aoa', explainer_type='Gradient', do_attention=False)
 
-    analyze_ablation('gridTD')
+    # analyze_ablation('gridTD')
     # analyze_TPFP_20('gridTD')
     # analyze_bbox('gridTD')
     # analyze_ablation_aoa()
@@ -1573,9 +1582,9 @@ if __name__ == '__main__':
     '''observe the frequent words of the test set'''
     # predicted_file = './output/gridTD_BU_cideropt/vgg16/cocorobust/reference_cocorobust_split_test_beam_search_3.yaml'
     # predicted_file = './output/gridTD_BU_cideropt/vgg16/coco2017/predictions_coco2017_split_test_beam_search_3_epoch13.yaml'
-    predicted_file = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\output\\gridTD_BU\\vgg16\\flickr30k\\predictions_flickr30k_split_test_beam_search_3_epoch8.yaml'
-    observe_frequent_words(predicted_file,0)
-    ground_truth_work_frequency('flickr30k')
+    # predicted_file = 'E:\\Data Science MSc\\Q4\\CV\\LRP-imagecaptioning-pytorch\\output\\gridTD_BU\\vgg16\\flickr30k\\predictions_flickr30k_split_test_beam_search_3_epoch8.yaml'
+    # observe_frequent_words(predicted_file,0)
+    # ground_truth_work_frequency('flickr30k')
 
     '''calculate map'''
 
