@@ -110,7 +110,7 @@ def main(args):
 
 
     print(f'==========Start Training==========')
-    for epoch in range(start_epoch, args.epochs):
+    for epoch in range(start_epoch, start_epoch + args.epochs):
         # if args.model_type == 'aoa':
         #     if epoch > 0 and (epoch)%3==0:
         #         mutils.adjust_learning_rate(optimizer, 0.8, 2e-5)
@@ -137,7 +137,7 @@ def main(args):
             # print(f'Traning with ss_prob {args.ss_prob}')
         train_func(train_loader, model, criterion, optimizer, epoch, args.ss_prob, word_map, args.print_freq, args.grad_clip)
 
-        bleu, cider = validate(val_loader,model, word_map, 3, epoch, beam_search_type='beam_search')
+        bleu, cider = validate(val_loader,model, word_map, 4, epoch, beam_search_type='beam_search')
         is_best = cider > best_cider
         best_cider = max(cider, best_cider)
         if not is_best:
@@ -282,7 +282,7 @@ def trainciderlrp(train_loader, model, criterion, optimizer, epoch, ss_prob, wor
                      'state_dict': model.state_dict(),
                      'batch': i}
             filename = f'lrpcider_checkpoint_epoch{epoch}_batch_{i}.pth'
-            torch.save(state, os.path.join('/home/sunjiamei/work/ImageCaptioning/ImgCaptioningPytorch/output/gridTD/vgg16/flickr30k/lrpciderfinetune/', filename))
+            torch.save(state, os.path.join('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\meme', filename))
 
 
 def validate(val_loader, model, word_map, beam_size, epoch, beam_search_type='greedy'):
@@ -325,21 +325,25 @@ def validate(val_loader, model, word_map, beam_size, epoch, beam_search_type='gr
                     references[image_id].append({'caption':ref})
                 image_id += 1
     # print(hypotheses)
-    print("Calculating Evalaution Metric Scores......\n")
+    # print("Calculating Evalaution Metric Scores......\n")
+    # print("Bleu here")
     avg_bleu_dict = BLEU().calculate(hypotheses,references)
     bleu4 = avg_bleu_dict['bleu_4']
-    avg_cider_dict = CIDEr().calculate(hypotheses, references)
-    cider = avg_cider_dict['cider']
-    avg_spice_dict = SPICE().calculate(hypotheses, references)
+    # print("Cider here")
+    #avg_cider_dict = CIDEr().calculate(hypotheses, references)
+    #cider = avg_cider_dict['cider']
+    #avg_spice_dict = SPICE().calculate(hypotheses, references)
     avg_rouge_dict = ROUGE().calculate(hypotheses,references)
 
-    print(f'Evaluatioin results at Epoch {epoch}, BLEU-4: {bleu4}, Cider: {cider}, SPICE: {avg_spice_dict["spice"]}, ROUGE: {avg_rouge_dict["rouge"]}')
-    return bleu4, cider
+    #print(f'Evaluatioin results at Epoch {epoch}, BLEU-4: {bleu4}, Cider: {cider}, SPICE: {avg_spice_dict["spice"]}, ROUGE: {avg_rouge_dict["rouge"]}')
+    print(
+        f'Evaluatioin results at Epoch {epoch}, BLEU-4: {bleu4}, ROUGE: {avg_rouge_dict["rouge"]}')
+    return bleu4, 0
 
 
 
 if __name__ == '__main__':
-    os.environ['CUDA_VISIBLE_DEVICES'] = '2'
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
     ''' ===for gridTD flickr30k cider==='''
     # parser = imgcap_gridTD_argument_parser()
@@ -366,10 +370,10 @@ if __name__ == '__main__':
     args.lrp_cider_tune = False
     # args.dataset = 'flickr30k'
     # args.resume = glob.glob('./output/gridTD/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch27*')[0]
-    args.dataset = 'coco2017'
-    args.resume = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch15*')[0]
+    args.dataset = 'memes'
+    args.resume = glob.glob('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\memes\checkpoint_memes_epoch172lrp_cider_0.pth')[0]
     # args.resume = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]
-    args.epochs = 17
+    args.epochs = 10
 
     ''' ===for aoa flickr30k cider==='''
     # parser = imgcap_aoa_argument_parser()

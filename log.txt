@@ -1,0 +1,2816 @@
+C:\ProgramData\miniconda3\envs\py38\python.exe "E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\train.py" 
+The arguments are
+Namespace(batch_size=32, cider_tune=False, dataset='memes', decoder_lr=0.0005, embed_dim=512, encoder='vgg16', encoder_lr=0.0001, epochs=1000, epochs_since_improvement=0, eval=False, finetune_encoder=True, gpu_devices='0', grad_clip=0.1, height=224, hidden_dim=512, lrp_cider_tune=False, lrp_tune=True, model_type='gridtd', optim='adamax', print_freq=500, resume='', rotate_max=10, rotate_min=-10, save_path='./output/gridTD/', scale_max=1.1, scale_min=0.9, ss_prob=None, start_epoch=0, test_split='test', weight='', weight_decay=0.0005, width=224, workers=1)
+model_type is gridtd
+==========Loading Data==========
+10
+14
+==========Data Loaded==========
+==========Setting Model==========
+==========Encoded image feature dim is 512==========
+==========Initializing model from random==========
+==========Training with finetuning CNN==========
+==========Start Training==========
+==========Training with lrp Optm==========
+Epoch: [0][0/10]	Loss 20.5534 (20.5534)	Top-1 Accuracy 0.000 (0.000)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 0, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [1][0/10]	Loss 13.3246 (13.3246)	Top-1 Accuracy 6.579 (6.579)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 1, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000080
+
+==========Training with lrp Optm==========
+Epoch: [2][0/10]	Loss 11.0864 (11.0864)	Top-1 Accuracy 7.031 (7.031)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 2, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [3][0/10]	Loss 8.6064 (8.6064)	Top-1 Accuracy 13.816 (13.816)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 3, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000064
+
+==========Training with lrp Optm==========
+Epoch: [4][0/10]	Loss 8.1325 (8.1325)	Top-1 Accuracy 10.714 (10.714)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 4, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [5][0/10]	Loss 7.6986 (7.6986)	Top-1 Accuracy 9.688 (9.688)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 5, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000051
+
+==========Training with lrp Optm==========
+Epoch: [6][0/10]	Loss 7.4636 (7.4636)	Top-1 Accuracy 14.931 (14.931)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 6, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [7][0/10]	Loss 5.4373 (5.4373)	Top-1 Accuracy 19.853 (19.853)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 7, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000041
+
+==========Training with lrp Optm==========
+Epoch: [8][0/10]	Loss 5.1804 (5.1804)	Top-1 Accuracy 20.312 (20.312)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 8, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [9][0/10]	Loss 5.7053 (5.7053)	Top-1 Accuracy 14.005 (14.005)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 9, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000033
+
+==========Training with lrp Optm==========
+Epoch: [10][0/10]	Loss 4.4541 (4.4541)	Top-1 Accuracy 19.572 (19.572)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 10, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [11][0/10]	Loss 5.3586 (5.3586)	Top-1 Accuracy 13.728 (13.728)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 11, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000026
+
+==========Training with lrp Optm==========
+Epoch: [12][0/10]	Loss 4.5612 (4.5612)	Top-1 Accuracy 16.168 (16.168)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 12, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [13][0/10]	Loss 4.3093 (4.3093)	Top-1 Accuracy 15.625 (15.625)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 13, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000021
+
+==========Training with lrp Optm==========
+Epoch: [14][0/10]	Loss 4.0280 (4.0280)	Top-1 Accuracy 13.438 (13.438)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 14, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [15][0/10]	Loss 3.2686 (3.2686)	Top-1 Accuracy 19.886 (19.886)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 15, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [16][0/10]	Loss 3.4165 (3.4165)	Top-1 Accuracy 20.455 (20.455)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 16, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [17][0/10]	Loss 3.2621 (3.2621)	Top-1 Accuracy 24.653 (24.653)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 17, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [18][0/10]	Loss 3.0452 (3.0452)	Top-1 Accuracy 26.250 (26.250)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 18, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [19][0/10]	Loss 3.5962 (3.5962)	Top-1 Accuracy 18.519 (18.519)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 19, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [20][0/10]	Loss 2.7739 (2.7739)	Top-1 Accuracy 33.542 (33.542)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 20, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [21][0/10]	Loss 2.6980 (2.6980)	Top-1 Accuracy 28.646 (28.646)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 21, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [22][0/10]	Loss 3.1379 (3.1379)	Top-1 Accuracy 19.196 (19.196)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 22, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [23][0/10]	Loss 3.1717 (3.1717)	Top-1 Accuracy 23.512 (23.512)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 23, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [24][0/10]	Loss 2.2797 (2.2797)	Top-1 Accuracy 44.318 (44.318)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 24, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [25][0/10]	Loss 2.6794 (2.6794)	Top-1 Accuracy 20.255 (20.255)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 25, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [26][0/10]	Loss 2.8686 (2.8686)	Top-1 Accuracy 27.500 (27.500)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 26, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [27][0/10]	Loss 1.8969 (1.8969)	Top-1 Accuracy 30.035 (30.035)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 27, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [28][0/10]	Loss 3.4729 (3.4729)	Top-1 Accuracy 16.771 (16.771)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 28, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [29][0/10]	Loss 3.0303 (3.0303)	Top-1 Accuracy 17.604 (17.604)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 29, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [30][0/10]	Loss 2.8098 (2.8098)	Top-1 Accuracy 19.420 (19.420)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 30, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [31][0/10]	Loss 2.8838 (2.8838)	Top-1 Accuracy 18.634 (18.634)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 31, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [32][0/10]	Loss 2.7171 (2.7171)	Top-1 Accuracy 34.583 (34.583)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 32, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [33][0/10]	Loss 2.8848 (2.8848)	Top-1 Accuracy 20.255 (20.255)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 33, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [34][0/10]	Loss 2.2173 (2.2173)	Top-1 Accuracy 27.778 (27.778)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 34, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [35][0/10]	Loss 2.0377 (2.0377)	Top-1 Accuracy 25.679 (25.679)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 35, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [36][0/10]	Loss 2.4517 (2.4517)	Top-1 Accuracy 19.560 (19.560)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 36, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [37][0/10]	Loss 3.1720 (3.1720)	Top-1 Accuracy 19.375 (19.375)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 37, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [38][0/10]	Loss 2.8286 (2.8286)	Top-1 Accuracy 27.431 (27.431)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 38, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [39][0/10]	Loss 2.7170 (2.7170)	Top-1 Accuracy 22.826 (22.826)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 39, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [40][0/10]	Loss 3.0668 (3.0668)	Top-1 Accuracy 21.065 (21.065)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 40, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [41][0/10]	Loss 2.4964 (2.4964)	Top-1 Accuracy 19.062 (19.062)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 41, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [42][0/10]	Loss 2.4963 (2.4963)	Top-1 Accuracy 20.938 (20.938)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 42, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [43][0/10]	Loss 3.1866 (3.1866)	Top-1 Accuracy 19.792 (19.792)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 43, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [44][0/10]	Loss 1.8182 (1.8182)	Top-1 Accuracy 36.538 (36.538)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 44, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [45][0/10]	Loss 3.0404 (3.0404)	Top-1 Accuracy 18.415 (18.415)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 45, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [46][0/10]	Loss 2.6691 (2.6691)	Top-1 Accuracy 27.941 (27.941)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 46, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [47][0/10]	Loss 1.5861 (1.5861)	Top-1 Accuracy 23.777 (23.777)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 47, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [48][0/10]	Loss 2.9272 (2.9272)	Top-1 Accuracy 27.989 (27.989)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 48, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [49][0/10]	Loss 2.7124 (2.7124)	Top-1 Accuracy 28.472 (28.472)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 49, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [50][0/10]	Loss 2.7016 (2.7016)	Top-1 Accuracy 22.321 (22.321)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 50, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [51][0/10]	Loss 2.0276 (2.0276)	Top-1 Accuracy 30.729 (30.729)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 51, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [52][0/10]	Loss 2.8528 (2.8528)	Top-1 Accuracy 31.108 (31.108)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 52, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [53][0/10]	Loss 2.6556 (2.6556)	Top-1 Accuracy 19.531 (19.531)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 53, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [54][0/10]	Loss 2.0337 (2.0337)	Top-1 Accuracy 31.406 (31.406)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 54, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [55][0/10]	Loss 2.8036 (2.8036)	Top-1 Accuracy 21.667 (21.667)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 55, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [56][0/10]	Loss 2.0333 (2.0333)	Top-1 Accuracy 24.592 (24.592)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 56, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [57][0/10]	Loss 1.7010 (1.7010)	Top-1 Accuracy 44.231 (44.231)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 57, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [58][0/10]	Loss 2.0874 (2.0874)	Top-1 Accuracy 29.062 (29.062)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 58, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [59][0/10]	Loss 2.1036 (2.1036)	Top-1 Accuracy 30.592 (30.592)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 59, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [60][0/10]	Loss 2.1854 (2.1854)	Top-1 Accuracy 20.982 (20.982)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 60, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [61][0/10]	Loss 2.7620 (2.7620)	Top-1 Accuracy 23.032 (23.032)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 61, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [62][0/10]	Loss 2.0521 (2.0521)	Top-1 Accuracy 26.902 (26.902)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 62, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [63][0/10]	Loss 1.9660 (1.9660)	Top-1 Accuracy 25.408 (25.408)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 63, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [64][0/10]	Loss 2.6784 (2.6784)	Top-1 Accuracy 24.537 (24.537)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 64, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [65][0/10]	Loss 1.8628 (1.8628)	Top-1 Accuracy 26.136 (26.136)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 65, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [66][0/10]	Loss 2.1332 (2.1332)	Top-1 Accuracy 26.278 (26.278)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 66, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [67][0/10]	Loss 1.9302 (1.9302)	Top-1 Accuracy 32.237 (32.237)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 67, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [68][0/10]	Loss 2.5423 (2.5423)	Top-1 Accuracy 20.536 (20.536)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 68, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [69][0/10]	Loss 2.2307 (2.2307)	Top-1 Accuracy 20.938 (20.938)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 69, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [70][0/10]	Loss 1.5478 (1.5478)	Top-1 Accuracy 31.250 (31.250)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 70, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [71][0/10]	Loss 1.9571 (1.9571)	Top-1 Accuracy 20.625 (20.625)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 71, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [72][0/10]	Loss 1.3979 (1.3979)	Top-1 Accuracy 32.537 (32.537)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 72, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [73][0/10]	Loss 2.0912 (2.0912)	Top-1 Accuracy 20.104 (20.104)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 73, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [74][0/10]	Loss 1.4487 (1.4487)	Top-1 Accuracy 45.433 (45.433)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 74, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [75][0/10]	Loss 2.3289 (2.3289)	Top-1 Accuracy 33.438 (33.438)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 75, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [76][0/10]	Loss 2.0014 (2.0014)	Top-1 Accuracy 33.160 (33.160)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 76, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [77][0/10]	Loss 1.8543 (1.8543)	Top-1 Accuracy 38.542 (38.542)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 77, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [78][0/10]	Loss 2.2350 (2.2350)	Top-1 Accuracy 31.579 (31.579)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 78, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [79][0/10]	Loss 2.4679 (2.4679)	Top-1 Accuracy 25.558 (25.558)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 79, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [80][0/10]	Loss 2.0316 (2.0316)	Top-1 Accuracy 27.310 (27.310)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 80, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [81][0/10]	Loss 2.3503 (2.3503)	Top-1 Accuracy 23.542 (23.542)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 81, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [82][0/10]	Loss 2.4217 (2.4217)	Top-1 Accuracy 29.018 (29.018)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 82, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [83][0/10]	Loss 1.8745 (1.8745)	Top-1 Accuracy 40.179 (40.179)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 83, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [84][0/10]	Loss 2.2337 (2.2337)	Top-1 Accuracy 30.978 (30.978)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 84, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [85][0/10]	Loss 2.4589 (2.4589)	Top-1 Accuracy 32.201 (32.201)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 85, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [86][0/10]	Loss 1.8822 (1.8822)	Top-1 Accuracy 31.094 (31.094)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 86, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [87][0/10]	Loss 2.1397 (2.1397)	Top-1 Accuracy 36.213 (36.213)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 87, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [88][0/10]	Loss 2.0291 (2.0291)	Top-1 Accuracy 20.647 (20.647)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 88, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [89][0/10]	Loss 1.8957 (1.8957)	Top-1 Accuracy 34.028 (34.028)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 89, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [90][0/10]	Loss 1.9548 (1.9548)	Top-1 Accuracy 23.661 (23.661)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 90, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [91][0/10]	Loss 2.0232 (2.0232)	Top-1 Accuracy 20.521 (20.521)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 91, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [92][0/10]	Loss 1.6493 (1.6493)	Top-1 Accuracy 29.348 (29.348)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 92, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [93][0/10]	Loss 1.8225 (1.8225)	Top-1 Accuracy 25.136 (25.136)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 93, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [94][0/10]	Loss 2.1220 (2.1220)	Top-1 Accuracy 24.442 (24.442)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 94, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [95][0/10]	Loss 1.6322 (1.6322)	Top-1 Accuracy 20.718 (20.718)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 95, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [96][0/10]	Loss 1.6990 (1.6990)	Top-1 Accuracy 34.549 (34.549)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 96, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [97][0/10]	Loss 1.9857 (1.9857)	Top-1 Accuracy 25.521 (25.521)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 97, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [98][0/10]	Loss 1.7044 (1.7044)	Top-1 Accuracy 20.312 (20.312)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 98, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [99][0/10]	Loss 1.6569 (1.6569)	Top-1 Accuracy 28.533 (28.533)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 99, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [100][0/10]	Loss 1.7014 (1.7014)	Top-1 Accuracy 28.906 (28.906)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 100, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [101][0/10]	Loss 2.1506 (2.1506)	Top-1 Accuracy 23.333 (23.333)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 101, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [102][0/10]	Loss 2.5266 (2.5266)	Top-1 Accuracy 25.104 (25.104)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 102, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [103][0/10]	Loss 1.9481 (1.9481)	Top-1 Accuracy 23.264 (23.264)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 103, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [104][0/10]	Loss 1.1919 (1.1919)	Top-1 Accuracy 42.292 (42.292)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 104, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [105][0/10]	Loss 1.9022 (1.9022)	Top-1 Accuracy 26.223 (26.223)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 105, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [106][0/10]	Loss 1.6694 (1.6694)	Top-1 Accuracy 40.417 (40.417)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 106, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [107][0/10]	Loss 1.6384 (1.6384)	Top-1 Accuracy 22.656 (22.656)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 107, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [108][0/10]	Loss 1.6239 (1.6239)	Top-1 Accuracy 21.458 (21.458)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 108, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [109][0/10]	Loss 1.6741 (1.6741)	Top-1 Accuracy 21.094 (21.094)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 109, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [110][0/10]	Loss 1.4686 (1.4686)	Top-1 Accuracy 39.509 (39.509)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 110, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [111][0/10]	Loss 1.3812 (1.3812)	Top-1 Accuracy 28.835 (28.835)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 111, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [112][0/10]	Loss 1.4700 (1.4700)	Top-1 Accuracy 32.465 (32.465)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 112, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [113][0/10]	Loss 1.3285 (1.3285)	Top-1 Accuracy 23.438 (23.438)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 113, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [114][0/10]	Loss 1.4557 (1.4557)	Top-1 Accuracy 39.167 (39.167)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 114, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [115][0/10]	Loss 2.0299 (2.0299)	Top-1 Accuracy 33.016 (33.016)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 115, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [116][0/10]	Loss 1.6607 (1.6607)	Top-1 Accuracy 36.806 (36.806)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 116, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [117][0/10]	Loss 1.2905 (1.2905)	Top-1 Accuracy 46.154 (46.154)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 117, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [118][0/10]	Loss 1.0266 (1.0266)	Top-1 Accuracy 41.518 (41.518)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 118, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [119][0/10]	Loss 1.4981 (1.4981)	Top-1 Accuracy 29.620 (29.620)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 119, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [120][0/10]	Loss 1.1749 (1.1749)	Top-1 Accuracy 25.994 (25.994)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 120, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [121][0/10]	Loss 1.5572 (1.5572)	Top-1 Accuracy 36.632 (36.632)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 121, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [122][0/10]	Loss 1.3584 (1.3584)	Top-1 Accuracy 24.884 (24.884)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 122, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [123][0/10]	Loss 1.7366 (1.7366)	Top-1 Accuracy 25.000 (25.000)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 123, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [124][0/10]	Loss 1.4127 (1.4127)	Top-1 Accuracy 35.938 (35.938)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 124, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [125][0/10]	Loss 1.3671 (1.3671)	Top-1 Accuracy 34.844 (34.844)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 125, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [126][0/10]	Loss 1.4266 (1.4266)	Top-1 Accuracy 32.237 (32.237)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 126, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [127][0/10]	Loss 1.2884 (1.2884)	Top-1 Accuracy 35.764 (35.764)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 127, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [128][0/10]	Loss 1.0518 (1.0518)	Top-1 Accuracy 43.527 (43.527)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 128, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [129][0/10]	Loss 1.5661 (1.5661)	Top-1 Accuracy 32.986 (32.986)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 129, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [130][0/10]	Loss 2.0305 (2.0305)	Top-1 Accuracy 25.938 (25.938)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 130, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [131][0/10]	Loss 1.4063 (1.4063)	Top-1 Accuracy 27.582 (27.582)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 131, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [132][0/10]	Loss 1.5661 (1.5661)	Top-1 Accuracy 37.500 (37.500)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 132, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [133][0/10]	Loss 1.7453 (1.7453)	Top-1 Accuracy 25.463 (25.463)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 133, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [134][0/10]	Loss 1.1995 (1.1995)	Top-1 Accuracy 29.315 (29.315)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 134, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [135][0/10]	Loss 1.8212 (1.8212)	Top-1 Accuracy 21.979 (21.979)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 135, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [136][0/10]	Loss 1.3875 (1.3875)	Top-1 Accuracy 32.188 (32.188)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 136, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [137][0/10]	Loss 1.4759 (1.4759)	Top-1 Accuracy 39.286 (39.286)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 137, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [138][0/10]	Loss 1.2067 (1.2067)	Top-1 Accuracy 29.613 (29.613)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 138, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [139][0/10]	Loss 1.6564 (1.6564)	Top-1 Accuracy 34.517 (34.517)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 139, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [140][0/10]	Loss 1.1870 (1.1870)	Top-1 Accuracy 32.465 (32.465)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 140, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [141][0/10]	Loss 1.4031 (1.4031)	Top-1 Accuracy 38.021 (38.021)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 141, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [142][0/10]	Loss 1.5242 (1.5242)	Top-1 Accuracy 25.104 (25.104)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 142, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [143][0/10]	Loss 1.4200 (1.4200)	Top-1 Accuracy 29.531 (29.531)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 143, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [144][0/10]	Loss 1.2842 (1.2842)	Top-1 Accuracy 32.589 (32.589)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 144, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [145][0/10]	Loss 1.5128 (1.5128)	Top-1 Accuracy 23.854 (23.854)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 145, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [146][0/10]	Loss 1.4863 (1.4863)	Top-1 Accuracy 21.296 (21.296)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 146, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [147][0/10]	Loss 1.4550 (1.4550)	Top-1 Accuracy 32.292 (32.292)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 147, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [148][0/10]	Loss 1.3655 (1.3655)	Top-1 Accuracy 48.558 (48.558)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 148, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [149][0/10]	Loss 1.4738 (1.4738)	Top-1 Accuracy 22.396 (22.396)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 149, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [150][0/10]	Loss 1.6588 (1.6588)	Top-1 Accuracy 21.771 (21.771)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 150, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [151][0/10]	Loss 1.3052 (1.3052)	Top-1 Accuracy 34.549 (34.549)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 151, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [152][0/10]	Loss 1.3533 (1.3533)	Top-1 Accuracy 23.854 (23.854)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 152, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [153][0/10]	Loss 1.5188 (1.5188)	Top-1 Accuracy 23.727 (23.727)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 153, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [154][0/10]	Loss 1.6208 (1.6208)	Top-1 Accuracy 22.917 (22.917)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 154, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [155][0/10]	Loss 1.3817 (1.3817)	Top-1 Accuracy 30.027 (30.027)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 155, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [156][0/10]	Loss 1.1711 (1.1711)	Top-1 Accuracy 27.989 (27.989)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 156, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [157][0/10]	Loss 1.5488 (1.5488)	Top-1 Accuracy 37.344 (37.344)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 157, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [158][0/10]	Loss 1.0807 (1.0807)	Top-1 Accuracy 31.562 (31.562)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 158, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [159][0/10]	Loss 1.0905 (1.0905)	Top-1 Accuracy 31.875 (31.875)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 159, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [160][0/10]	Loss 1.1821 (1.1821)	Top-1 Accuracy 28.261 (28.261)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 160, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [161][0/10]	Loss 1.1236 (1.1236)	Top-1 Accuracy 32.812 (32.812)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 161, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [162][0/10]	Loss 1.2809 (1.2809)	Top-1 Accuracy 34.549 (34.549)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 162, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [163][0/10]	Loss 1.2691 (1.2691)	Top-1 Accuracy 23.148 (23.148)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 163, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [164][0/10]	Loss 0.7593 (0.7593)	Top-1 Accuracy 67.188 (67.188)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 164, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [165][0/10]	Loss 1.2733 (1.2733)	Top-1 Accuracy 21.987 (21.987)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 165, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [166][0/10]	Loss 1.0593 (1.0593)	Top-1 Accuracy 30.966 (30.966)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 166, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+==========Training with lrp Optm==========
+Epoch: [167][0/10]	Loss 1.0326 (1.0326)	Top-1 Accuracy 30.556 (30.556)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 167, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [168][0/10]	Loss 1.4040 (1.4040)	Top-1 Accuracy 28.668 (28.668)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 168, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [169][0/10]	Loss 1.3401 (1.3401)	Top-1 Accuracy 23.884 (23.884)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 169, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [170][0/10]	Loss 1.4223 (1.4223)	Top-1 Accuracy 23.125 (23.125)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 170, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [171][0/10]	Loss 0.9276 (0.9276)	Top-1 Accuracy 52.500 (52.500)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 171, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+
+DECAYING learning rate.
+The new learning rate is 0.000017
+
+==========Training with lrp Optm==========
+Epoch: [172][0/10]	Loss 1.4368 (1.4368)	Top-1 Accuracy 27.396 (27.396)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 172, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 1
+
+==========Training with lrp Optm==========
+Epoch: [173][0/10]	Loss 1.3583 (1.3583)	Top-1 Accuracy 30.398 (30.398)	
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+'java' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
+���������ļ���
+Evaluatioin results at Epoch 173, BLEU-4: 0.0, ROUGE: 1.0
+
+Epochs since last improvement: 2
+
+Traceback (most recent call last):
+  File "C:\ProgramData\miniconda3\envs\py38\lib\site-packages\torch\serialization.py", line 423, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol)
+  File "C:\ProgramData\miniconda3\envs\py38\lib\site-packages\torch\serialization.py", line 650, in _save
+    zip_file.write_record(name, storage.data_ptr(), num_bytes)
+RuntimeError: [enforce fail at C:\cb\pytorch_1000000000000\work\caffe2\serialize\inline_container.cc:450] . PytorchStreamWriter failed writing file data/48: file write failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\train.py", line 397, in <module>
+    main(args)
+  File "E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\train.py", line 149, in main
+    mutils.save_checkpoint(args.dataset, str(epoch)+'lrp', epochs_since_improvement, model, optimizer,bleu,cider,is_best, args.save_path, args.encoder)
+  File "E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\models\modelutils.py", line 138, in save_checkpoint
+    torch.save(state, os.path.join(save_path,encoder,data_name,filename))
+  File "C:\ProgramData\miniconda3\envs\py38\lib\site-packages\torch\serialization.py", line 424, in save
+    return
+  File "C:\ProgramData\miniconda3\envs\py38\lib\site-packages\torch\serialization.py", line 290, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at C:\cb\pytorch_1000000000000\work\caffe2\serialize\inline_container.cc:325] . unexpected pos 497786496 vs 497786400
+
+Process finished with exit code -1073740791 (0xC0000409)

@@ -182,8 +182,10 @@ class CiderScorer(object):
 
     def compute_score(self, option=None, verbose=0):
         # compute idf
-        self.compute_doc_freq()
+        # self.compute_doc_freq()
         # assert to check document frequency
+        print("self.compute_doc_freq(): ", self.compute_doc_freq())
+        print("self.document_frequency.values(): ", self.document_frequency.values())
         assert(len(self.ctest) >= max(self.document_frequency.values()))
         # compute cider score
         score = self.compute_cider()

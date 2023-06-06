@@ -442,8 +442,8 @@ class GridTDModel(nn.Module):
                 else:
                     top_k_scores, top_words = scores.view(-1).topk(unfinished_num, -1, True, True) # (unfinished_num, beam_size)
                 beam_idx = top_words / vocab_size  # (unfinished_num, )
+                beam_idx = beam_idx.long()
                 next_word_idx = top_words % vocab_size  # (unfinished_num, )
-                # print('next_word',next_word_idx)
                 seqs = torch.cat([seqs[beam_idx], next_word_idx.unsqueeze(1)], dim=1)
                 incomplete_inds = [ind for ind, next_word in enumerate(next_word_idx) if next_word != word_map['<end>']]
                 complete_inds = list(set(range(len(next_word_idx))) - set(incomplete_inds))
@@ -714,7 +714,7 @@ class ExplainGridTDAttention(object):
             self.model = model
         else:
             self.model = GridTDModel(args.embed_dim, args.hidden_dim, len(word_map), args.encoder)
-            checkpoint = torch.load(args.weight, map_location=torch.device('cpu'))
+            checkpoint = torch.load(args.weight)
             self.model.load_state_dict(checkpoint['state_dict'])
             self.model.cuda()
         self.model.eval()
@@ -2112,6 +2112,7 @@ class GridTDModelBU(nn.Module):
                     else:
                         top_k_scores[g], top_words = scores.view(-1).topk(unfinished_num[g], -1, True, True)  # (unfinished_num, beam_size)
                     beam_idx = top_words // vocab_size  # (unfinished_num, )
+                    beam_idx = beam_idx.long()
                     next_word_idx = top_words % vocab_size  # (unfinished_num, )
                     # print('next_word',next_word_idx)
                     seqs[g] = torch.cat([seqs[g][beam_idx], next_word_idx.unsqueeze(1)], dim=1)
@@ -2204,6 +2205,7 @@ class GridTDModelBU(nn.Module):
                 else:
                     top_k_scores, top_words = scores.view(-1).topk(unfinished_num, -1, True, True) # (unfinished_num, beam_size)
                 beam_idx = top_words / vocab_size  # (unfinished_num, )
+                beam_idx = beam_idx.long()
                 next_word_idx = top_words % vocab_size  # (unfinished_num, )
                 # print('next_word',next_word_idx)
                 seqs = torch.cat([seqs[beam_idx], next_word_idx.unsqueeze(1)], dim=1)
@@ -2468,12 +2470,12 @@ if __name__ == '__main__':
     import config
     import json
     import glob
-    img_filepath = '/home/sunjiamei/work/ImageCaptioning/dataset/coco/images/val2017/000000015746.jpg'
+    img_filepath = 'E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\dataset\memes\images\image_0.jpg'
     parser = config.imgcap_gridTD_argument_parser()
     args = parser.parse_args()
     # for coco
-    args.weight = glob.glob('../output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]
-    args.dataset = 'coco2017'
+    # args.weight = glob.glob('../output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]
+    args.dataset = 'memes'
 
     #for flickr30k
     # args.weight = glob.glob('../output/gridTD/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch28*')[0]

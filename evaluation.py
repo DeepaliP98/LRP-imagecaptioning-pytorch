@@ -859,11 +859,11 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
             os.makedirs(save_path_tpfp)
         evaluation_engin.ablation_experiment(data_file[i],explanation_type, save_path_ablation,do_attention=do_attention)
         evaluation_engin.explainer.model.zero_grad()
-        if img_filename in category_dict:
-            if model_type == 'aoa':
-                evaluation_engin.bbox_experiment(category_dict, data_file[i], save_path_bbox, head_idx=head_idx)
-            else:
-                evaluation_engin.bbox_experiment(category_dict, data_file[i], save_path_bbox, explanation_type, do_attention=do_attention)
+        #if img_filename in category_dict:
+        #    if model_type == 'aoa':
+        #        evaluation_engin.bbox_experiment(category_dict, data_file[i], save_path_bbox, head_idx=head_idx)
+        #    else:
+        #        evaluation_engin.bbox_experiment(category_dict, data_file[i], save_path_bbox, explanation_type, do_attention=do_attention)
         evaluation_engin.explainer.model.zero_grad()
         evaluation_engin.tpfp_experiment(data_file[i], explanation_type,  save_path_tpfp, flickr_frequent, do_attention=do_attention)
         evaluation_engin.explainer.model.zero_grad()

@@ -17,7 +17,7 @@ class ImagecapDataset(Dataset):
         if datasetname in ['coco2014','coco2017']:
             min_word_freq = 4
         else:
-            min_word_freq = 3
+            min_word_freq = 4
         file_name = f'./dataset/{split}_imagecap_{datasetname}_5_cap_per_img_{min_word_freq}_min_word_freq.json'
         if not os.path.isfile(file_name):
             raise NotImplementedError(f'dataloader error: do not exist {file_name}')
@@ -71,7 +71,7 @@ class ImagecapDatasetFromFeature(Dataset):
         if datasetname in ['coco2014','coco2017', 'cocorobust']:
             min_word_freq = 4
         else:
-            min_word_freq = 3
+            min_word_freq = 4
         file_name = f'./dataset/{split}_imagecap_{datasetname}_5_cap_per_img_{min_word_freq}_min_word_freq.json'
         if not os.path.isfile(file_name):
             raise NotImplementedError(f'dataloader error: do not exist {file_name}')

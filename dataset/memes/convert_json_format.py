@@ -51,7 +51,7 @@ def convert(file_path, file_ouptut_name):
 
 
 if __name__ == "__main__":
-    convert('/Users/roywang/Desktop/Data Science - Year 1/Q4/CS4245 Seminar Computer Vision by Deep Learning/LRP-feature-dataset/Untitled/LRP-imagecaptioning-pytorch/dataset/memes/images/meme_local_dataset.json', 'meme_regenerate')
+    convert('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\dataset\memes\meme_local_dataset.json', 'meme_regenerate')
 
 
 
