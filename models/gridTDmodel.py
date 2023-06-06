@@ -442,8 +442,8 @@ class GridTDModel(nn.Module):
                 else:
                     top_k_scores, top_words = scores.view(-1).topk(unfinished_num, -1, True, True) # (unfinished_num, beam_size)
                 beam_idx = top_words / vocab_size  # (unfinished_num, )
+                beam_idx = beam_idx.long()
                 next_word_idx = top_words % vocab_size  # (unfinished_num, )
-                # print('next_word',next_word_idx)
                 seqs = torch.cat([seqs[beam_idx], next_word_idx.unsqueeze(1)], dim=1)
                 incomplete_inds = [ind for ind, next_word in enumerate(next_word_idx) if next_word != word_map['<end>']]
                 complete_inds = list(set(range(len(next_word_idx))) - set(incomplete_inds))
@@ -714,7 +714,7 @@ class ExplainGridTDAttention(object):
             self.model = model
         else:
             self.model = GridTDModel(args.embed_dim, args.hidden_dim, len(word_map), args.encoder)
-            checkpoint = torch.load(args.weight, map_location=torch.device('cpu'))
+            checkpoint = torch.load(args.weight)
             self.model.load_state_dict(checkpoint['state_dict'])
             self.model.cuda()
         self.model.eval()
@@ -2112,6 +2112,7 @@ class GridTDModelBU(nn.Module):
                     else:
                         top_k_scores[g], top_words = scores.view(-1).topk(unfinished_num[g], -1, True, True)  # (unfinished_num, beam_size)
                     beam_idx = top_words // vocab_size  # (unfinished_num, )
+                    beam_idx = beam_idx.long()
                     next_word_idx = top_words % vocab_size  # (unfinished_num, )
                     # print('next_word',next_word_idx)
                     seqs[g] = torch.cat([seqs[g][beam_idx], next_word_idx.unsqueeze(1)], dim=1)
@@ -2204,6 +2205,7 @@ class GridTDModelBU(nn.Module):
                 else:
                     top_k_scores, top_words = scores.view(-1).topk(unfinished_num, -1, True, True) # (unfinished_num, beam_size)
                 beam_idx = top_words / vocab_size  # (unfinished_num, )
+                beam_idx = beam_idx.long()
                 next_word_idx = top_words % vocab_size  # (unfinished_num, )
                 # print('next_word',next_word_idx)
                 seqs = torch.cat([seqs[beam_idx], next_word_idx.unsqueeze(1)], dim=1)

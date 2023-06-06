@@ -564,8 +564,8 @@ def generate_meme_data():
     :return:
     '''
     dataset = 'memes'
-    json_path = '/Users/roywang/Desktop/Data Science - Year 1/Q4/CS4245 Seminar Computer Vision by Deep Learning/LRP-feature-dataset/Untitled/LRP-imagecaptioning-pytorch/dataset/memes/meme_regenerate.json'
-    image_folder = '/Users/roywang/Desktop/Data Science - Year 1/Q4/CS4245 Seminar Computer Vision by Deep Learning/LRP-feature-dataset/Untitled/LRP-imagecaptioning-pytorch/dataset/memes/'
+    json_path = 'E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\dataset\memes\meme_regenerate.json'
+    image_folder = 'E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\dataset\memes'
     caption_per_img = 5
     min_freq_word = 4
     create_input_files(dataset, karpathy_json_path=json_path, image_folder=image_folder,
