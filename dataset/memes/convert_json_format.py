@@ -22,12 +22,17 @@ def convert(file_path, file_ouptut_name):
             raw_cap_list =  meme['alt_text'].split(" | ")
             for sentence in raw_cap_list:
                 new_token = dict()
-                new_token["tokens"] = sentence.split(" ")
+                word_list = sentence.split(" ")
+                new_word_list = []
+                for i in word_list:
+                    if len(i) > 0 and i != "w/" and "." not in i and i != ' ':
+                        new_word_list.append(i.strip("!"))
+                new_token["tokens"] = new_word_list
                 new_image["sentences"].append(new_token)
-            if img_counter < 60:
+            if img_counter < 50:
                 new_image['split'] = "train"
             else:
-                if img_counter < 74:
+                if img_counter < 65:
                     new_image['split'] = "val"
                 else:
                     new_image['split'] = "test"

@@ -772,7 +772,7 @@ class EvaluationExperimentsAOA(object):
 
 
 
-def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_idx=None, dataset='flickr30k', do_attention=True):
+def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_idx=None, dataset='memes', do_attention=True):
 
     if model_type == 'gridTD':
         parser = imgcap_gridTD_argument_parser()
@@ -780,8 +780,8 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
         if dataset == 'coco2017':
             args.weight = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]  # 22
         else:
-            args.weight = glob.glob('./output/gridTD/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch28*')[0]
-        args.dataset = 'flickr30k'
+            args.weight = glob.glob('./output/gridTD/vgg16/memes/checkpoint_memes_epoch172lrp_cider_0.pth')[0]
+        args.dataset = 'memes'
         word_map_path = f'./dataset/wordmap_{args.dataset}.json'
         word_map = json.load(open(word_map_path, 'r'))
     elif model_type == 'aoa':
@@ -790,7 +790,7 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
         if dataset == 'coco2017':
             args.weight = glob.glob('./output/aoa/vgg16/coco2017/BEST_checkpoint_coco2017_epoch34*')[0]
         else:
-            args.weight = glob.glob('./output/aoa/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch31*')[0]
+            args.weight = glob.glob('./output/gridTD/vgg16/memes/checkpoint_memes_epoch172lrp_cider_0.pth')[0]
         args.dataset = dataset
         word_map_path = f'./dataset/wordmap_{args.dataset}.json'
         word_map = json.load(open(word_map_path, 'r'))
@@ -1553,7 +1553,7 @@ if __name__ == '__main__':
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
     generate_evaluation_files('gridTD', explainer_type='lrp', dataset='memes', do_attention=True)
-    # generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
+    generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)

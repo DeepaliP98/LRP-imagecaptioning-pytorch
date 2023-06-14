@@ -83,7 +83,7 @@ def main(args):
     if args.resume:
         print(f'==========Resuming weights from {args.resume}==========')
         checkpoint = torch.load(args.resume)
-        start_epoch = checkpoint['epoch'] + 1
+        start_epoch = int(checkpoint['epoch'].strip('lrp')) + 1
         epochs_since_improvement = checkpoint['epochs_since_improvement']
         best_cider = checkpoint['cider']
         model.load_state_dict(checkpoint['state_dict'])
@@ -282,7 +282,8 @@ def trainciderlrp(train_loader, model, criterion, optimizer, epoch, ss_prob, wor
                      'state_dict': model.state_dict(),
                      'batch': i}
             filename = f'lrpcider_checkpoint_epoch{epoch}_batch_{i}.pth'
-            torch.save(state, os.path.join('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\meme', filename))
+            if i % print_freq == 9:
+                torch.save(state, os.path.join('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\meme', filename))
 
 
 def validate(val_loader, model, word_map, beam_size, epoch, beam_search_type='greedy'):
@@ -325,20 +326,22 @@ def validate(val_loader, model, word_map, beam_size, epoch, beam_search_type='gr
                     references[image_id].append({'caption':ref})
                 image_id += 1
     # print(hypotheses)
-    # print("Calculating Evalaution Metric Scores......\n")
-    # print("Bleu here")
+    print("Calculating Evalaution Metric Scores......\n")
     avg_bleu_dict = BLEU().calculate(hypotheses,references)
     bleu4 = avg_bleu_dict['bleu_4']
     # print("Cider here")
-    #avg_cider_dict = CIDEr().calculate(hypotheses, references)
-    #cider = avg_cider_dict['cider']
+    avg_cider_dict = CIDEr().calculate(hypotheses, references)
+    cider = avg_cider_dict['cider']
     #avg_spice_dict = SPICE().calculate(hypotheses, references)
-    avg_rouge_dict = ROUGE().calculate(hypotheses,references)
+    #avg_rouge_dict = ROUGE().calculate(hypotheses,references)
 
     #print(f'Evaluatioin results at Epoch {epoch}, BLEU-4: {bleu4}, Cider: {cider}, SPICE: {avg_spice_dict["spice"]}, ROUGE: {avg_rouge_dict["rouge"]}')
     print(
-        f'Evaluatioin results at Epoch {epoch}, BLEU-4: {bleu4}, ROUGE: {avg_rouge_dict["rouge"]}')
-    return bleu4, 0
+        f'Evaluatioin results at Epoch {epoch}, BLEU-4: {bleu4}, Cider: {cider}')
+
+    #print(
+    #    f'Evaluatioin results at Epoch {epoch}, BLEU-4: {bleu4}, ROUGE: {avg_rouge_dict["rouge"]}')
+    return bleu4, cider
 
 
 
@@ -371,9 +374,9 @@ if __name__ == '__main__':
     # args.dataset = 'flickr30k'
     # args.resume = glob.glob('./output/gridTD/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch27*')[0]
     args.dataset = 'memes'
-    args.resume = glob.glob('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\memes\checkpoint_memes_epoch172lrp_cider_0.pth')[0]
+    # args.resume = glob.glob('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\memes\checkpoint_memes_epoch172lrp_cider_0.pth')[0]
     # args.resume = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]
-    args.epochs = 10
+    args.epochs = 100
 
     ''' ===for aoa flickr30k cider==='''
     # parser = imgcap_aoa_argument_parser()
