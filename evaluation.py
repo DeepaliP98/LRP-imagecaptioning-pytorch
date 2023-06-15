@@ -780,7 +780,7 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
         if dataset == 'coco2017':
             args.weight = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]  # 22
         else:
-            args.weight = glob.glob('./output/gridTD/vgg16/memes/checkpoint_memes_epoch172lrp_cider_0.pth')[0]
+            args.weight = glob.glob('./output/gridTD/vgg16/memes/checkpoint_memes_epoch*')[0]
         args.dataset = 'memes'
         word_map_path = f'./dataset/wordmap_{args.dataset}.json'
         word_map = json.load(open(word_map_path, 'r'))
@@ -788,9 +788,9 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
         parser = imgcap_aoa_argument_parser()
         args = parser.parse_args()
         if dataset == 'coco2017':
-            args.weight = glob.glob('./output/aoa/vgg16/coco2017/BEST_checkpoint_coco2017_epoch34*')[0]
+            args.weight = glob.glob('./output/aoa/vgg16/coco2017/BEST_checkpoint_coco2017_epoch*')[0]
         else:
-            args.weight = glob.glob('./output/gridTD/vgg16/memes/checkpoint_memes_epoch172lrp_cider_0.pth')[0]
+            args.weight = glob.glob('./output/aoa/vgg16/memes/checkpoint_memes_epoch*')[0]
         args.dataset = dataset
         word_map_path = f'./dataset/wordmap_{args.dataset}.json'
         word_map = json.load(open(word_map_path, 'r'))
@@ -945,11 +945,11 @@ def analyze_ablation(model_type):
         score_img_cat_neg = 0
         score_img_cat_pos = 0
 
-        path_ablation = os.path.join(args.save_path, args.encoder, 'coco2017/evaluation/ablation/', explanation_type)
+        path_ablation = os.path.join(args.save_path, args.encoder, 'memes/evaluation/ablation/', explanation_type)
         if explanation_type == 'attention':
-            files = glob.glob(os.path.join(args.save_path, args.encoder, 'coco2017/evaluation/ablation/lrp/', '*'+explanation_type+'_ablation.json'))
+            files = glob.glob(os.path.join(args.save_path, args.encoder, 'memes/evaluation/ablation/lrp/', '*'+explanation_type+'_ablation.json'))
         elif explanation_type == 'random':
-            files = glob.glob(os.path.join(args.save_path, args.encoder, 'coco2017/evaluation/ablation/lrp/',
+            files = glob.glob(os.path.join(args.save_path, args.encoder, 'memes/evaluation/ablation/lrp/',
                                            '*' + explanation_type + '_ablation.json'))
         else:
             files = glob.glob(os.path.join(path_ablation,'*'+explanation_type+'_ablation.json'))
@@ -1031,10 +1031,10 @@ def analyze_ablation_aoa():
         score_word_stop_neg = 0
         count_word_cat_neg = 0
         score_word_cat_neg = 0
-        path_ablation = os.path.join(args.save_path, args.encoder, 'coco2017/evaluation/ablation/', explanation_type)
+        path_ablation = os.path.join(args.save_path, args.encoder, 'memes/evaluation/ablation/', explanation_type)
 
         if explanation_type == 'random':
-            files = glob.glob(os.path.join(args.save_path, args.encoder, 'coco2017/evaluation/ablation/lrp/',
+            files = glob.glob(os.path.join(args.save_path, args.encoder, 'memes/evaluation/ablation/lrp/',
                                            '*' + explanation_type + '_ablation.json'))
         else:
             files = glob.glob(os.path.join(path_ablation,'*'+explanation_type+'_ablation.json'))
@@ -1079,7 +1079,7 @@ def analyze_ablation_aoa():
         # row_list.append([explanation_type] + score_pos.tolist())
 
         print(row_list)
-    with open(os.path.join(args.save_path, args.encoder, 'coco2017/evaluation/ablation/', 'aoa_ablation.csv'), 'w') as f:
+    with open(os.path.join(args.save_path, args.encoder, 'memes/evaluation/ablation/', 'aoa_ablation.csv'), 'w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerows(row_list)
 
@@ -1553,7 +1553,7 @@ if __name__ == '__main__':
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
     generate_evaluation_files('gridTD', explainer_type='lrp', dataset='memes', do_attention=True)
-    generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
+    #generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)
@@ -1565,7 +1565,7 @@ if __name__ == '__main__':
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradCamneg', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='lrpneg', do_attention=False)
-    # for i in range(8):
+    #for i in range(8):
     #     generate_evaluation_files('aoa', explainer_type='lrp', head_idx=i, do_attention=False)
     # generate_evaluation_files('aoa', explainer_type='GuidedGradCam', do_attention=False)
     # generate_evaluation_files('aoa', explainer_type='GradCam', do_attention=False)

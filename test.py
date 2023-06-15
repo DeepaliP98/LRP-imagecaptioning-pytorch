@@ -139,7 +139,7 @@ if __name__ == '__main__':
     import glob
     # model_weight_path = './output/adaptive/BEST_checkpoint_flickr30k_epoch49_cider_0.5414486487400703.pth'
     # model_weight_paths = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')
-    model_weight_paths = glob.glob('./output/gridTD/vgg16/memes/checkpoint_memes_epoch172lrp_cider_0.pth')
+    model_weight_paths = glob.glob('./output/gridTD/vgg16/memes/checkpoint_memes_epoch*.pth')
     # model_weight_paths = glob.glob('./output/aoa/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch31*')
     # model_weight_paths = glob.glob('./output/aoa/vgg16/coco2017/BEST_checkpoint_coco2017_epoch34*')
     # model_weight_paths = glob.glob('./output/gridTD/vgg16/coco2017/lrpfinetune1/checkpoint*')

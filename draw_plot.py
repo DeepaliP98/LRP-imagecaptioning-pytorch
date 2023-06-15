@@ -37,5 +37,5 @@ def draw_plot(data):
     plt.show()
 
 if __name__ == '__main__':
-    draw_plot(readInFile("log.txt"))
+    draw_plot(readInFile("log_aoa.txt"))
     # readInFile("log.txt")
