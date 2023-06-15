@@ -195,6 +195,7 @@ class GridTDModel(nn.Module):
             # print(last_scores.size())
             last_label = torch.argmax(last_scores, -1)  #(batch_size, )
             # print(last_label.size())
+            print("last_scores: ", last_scores)
         return predictions, alphas, betas, last_scores, max_length
 
     def sample(self, images, word_map, caption_lengths, opt={}):
@@ -464,6 +465,7 @@ class GridTDModel(nn.Module):
                 image_feature_proj = image_feature_proj[beam_idx[incomplete_inds]]
                 global_img_feature = global_img_feature[beam_idx[incomplete_inds]]
                 top_k_scores = top_k_scores[incomplete_inds].unsqueeze(1)
+                # print("top_k_scores: ", top_k_scores)
                 k_prev_words = next_word_idx[incomplete_inds].unsqueeze(1)
                 # Break if things have been going on too long
             if len(complete_seqs) > 0:
@@ -798,9 +800,10 @@ class ExplainGridTDAttention(object):
 
     def forward_greedy(self, img_filepath ):
         self.img = self.preprocess_img(img_filepath) #(bs, C, H, W)
-        self.beam_caption, self.beam_caption_encode = self.model.beam_search(self.img, self.word_map, beam_size=1, max_cap_length=20)
+        self.beam_caption, self.beam_caption_encode, seq = self.model.beam_search(self.img, self.word_map, beam_size=1, max_cap_length=20)
         self.beam_caption_encode = [self.word_map['<start>']] + self.beam_caption_encode
         print(f'the predicted caption of {img_filepath} is "{self.beam_caption[0]}"')
+        print("weight, forward_greedy: ", seq)
         print(self.beam_caption_encode)
         # perform the forward pass and save the intermediate variables
         self.image_features, self.avg_feature = self.model.img_encoder(self.img)  # (bs, fea_dim, H, W), (bs, fea_dim)
@@ -932,10 +935,11 @@ class ExplainGridTDAttention(object):
 
     def get_hidden_parameters(self, img_filepath ):
         self.img = self.preprocess_img(img_filepath)  # (bs, C, H, W)
-        self.beam_caption, self.beam_caption_encode = self.model.beam_search(self.img, self.word_map, beam_size=2,
+        self.beam_caption, self.beam_caption_encode, seq = self.model.beam_search(self.img, self.word_map, beam_size=2,
                                                                              max_cap_length=50)
         self.beam_caption_encode = [self.word_map['<start>']] + self.beam_caption_encode
         print(f'the predicted caption of {img_filepath} is "{self.beam_caption[0]}"')
+        print("weight, get_hidden_parameters1: ")
         print(self.beam_caption_encode)
         # perform the forward pass and save the intermediate variables
         self.image_features, self.avg_feature = self.model.img_encoder(self.img)  # (bs, fea_dim, H, W), (bs, fea_dim)
@@ -1322,10 +1326,11 @@ class ExplainGridTDGradient(object):
 
     def get_hidden_parameters(self, img_filepath):
         self.img = self.preprocess_img(img_filepath)  # (bs, C, H, W)
-        self.beam_caption, self.beam_caption_encode = self.model.beam_search(self.img, self.word_map, beam_size=3,
+        self.beam_caption, self.beam_caption_encode, _ = self.model.beam_search(self.img, self.word_map, beam_size=3,
                                                                              max_cap_length=50)
         self.beam_caption_encode = [self.word_map['<start>']] + self.beam_caption_encode
         print(f'the predicted caption of {img_filepath} is "{self.beam_caption[0]}"')
+        print("weight, get_hidden_parameters2: ")
         print(self.beam_caption_encode)
         # perform the forward pass and save the intermediate variables
         self.image_features, self.avg_feature = self.model.img_encoder(self.img)  # (bs, fea_dim, H, W), (bs, fea_dim)
@@ -2389,13 +2394,16 @@ class GridTDModelBU(nn.Module):
                                                           self.LanguageLSTM.bias_ih, self.LanguageLSTM.bias_hh)
             predict_score_t = self.fc(context_t_hat_ + h2_)  # (bs, vocab_size)
             state = (h1_, c1_, h2_, c2_)
-            # print(predict_score_t.size(), x1t_.size(), h1_.size(), c1_.size(), g1_.size(), i1_act_.size(), f1_act_.size(),
-            #       alpha_t_.size(), x2t_.size(), h2_.size(), c2_.size(), g2_.size(), i2_act_.size(), f2_act_.size(), context_t_.size(),
-            #       context_t_hat_.size(), st_.size(), beta_t_.size())
+            print(predict_score_t.size(), x1t_.size(), h1_.size(), c1_.size(), g1_.size(), i1_act_.size(), f1_act_.size(),
+                   alpha_t_.size(), x2t_.size(), h2_.size(), c2_.size(), g2_.size(), i2_act_.size(), f2_act_.size(), context_t_.size(),
+                   context_t_hat_.size(), st_.size(), beta_t_.size())
             predictions[:, t, :] = predict_score_t
             weight_context_hat, weight_h2t = self.get_lrp_weight_step(predict_score_t, rev_word_map, h2_, context_t_hat_)
             weight_prediction_t = self.fc(context_t_hat_*weight_context_hat + weight_h2t * h2_)
             weighted_predictions[:, t, :] = weight_prediction_t
+            print("weighted_predictions: ", weighted_predictions)
+            print("weight_prediction_t: ", weight_prediction_t)
+            print("predict_score_t: ", predict_score_t)
         return predictions, weighted_predictions, max_length
 
     def sample_lrp(self, images_features, rev_word_map, word_map, caption_lengths, opt={}):

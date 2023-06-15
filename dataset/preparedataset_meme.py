@@ -120,7 +120,7 @@ def create_input_files(dataset, karpathy_json_path, image_folder, captions_per_i
         captions = []
         for c in img['sentences']:
             # Update word frequency
-            if img['split'] in ['train', 'restval']:
+            if img['split'] in ['train', 'test', 'val']:
                 word_freq.update(c['tokens'])
             if len(c['tokens']) <= max_len:
                 captions.append(c['tokens'])
@@ -130,7 +130,7 @@ def create_input_files(dataset, karpathy_json_path, image_folder, captions_per_i
 
         path = os.path.join(image_folder, img['filepath'], img['filename']) if 'coco' in dataset else os.path.join(
             image_folder, img['filename'])
-        if img['split'] in {'train', 'restval'}:
+        if img['split'] in {'train', 'testval'}:
             train_image_paths.append(path)
             train_image_captions.append(captions)
         elif img['split'] in {'val'}:
@@ -475,7 +475,7 @@ def generate_meme_jsonfile():
     dataset = {}
     dataset['dataset'] = 'memes'
     dataset['images'] = []
-    annotation_train_file_path = '/Users/roywang/Desktop/Data Science - Year 1/Q4/CS4245 Seminar Computer Vision by Deep Learning/LRP-feature-dataset/Untitled/LRP-imagecaptioning-pytorch/dataset/memes/meme_regenerate.json'
+    annotation_train_file_path = 'E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\dataset\memes\meme_regenerate.json'
     annotation_val_file_path = ''
     coco_anns_train = json.load(open(annotation_train_file_path, 'r')) # keys are info, licenses, images, annotations  118287
     tokenizer = nltk.RegexpTokenizer(r"\w+")
@@ -567,7 +567,7 @@ def generate_meme_data():
     json_path = 'E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\dataset\memes\meme_regenerate.json'
     image_folder = 'E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\dataset\memes'
     caption_per_img = 5
-    min_freq_word = 4
+    min_freq_word = 1
     create_input_files(dataset, karpathy_json_path=json_path, image_folder=image_folder,
                        captions_per_image=caption_per_img, min_word_freq=min_freq_word, max_len=30)
 

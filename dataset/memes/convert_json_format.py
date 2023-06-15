@@ -12,22 +12,35 @@ def convert(file_path, file_ouptut_name):
     new_data_val['images'] = []
     new_data_test['images'] = []
     img_counter = 0
+    sentence_id_count = 0
     for img in data:
         new_image = dict()
         new_image['sentids'] = []
         new_image['imgid'] = img_counter
         new_image['sentences'] = []
+        meme_count = 5
         for meme in img["generated_memes"]:
-            new_image['sentids'].append(meme['id'])
-            raw_cap_list =  meme['alt_text'].split(" | ")
+            meme_count -= 1
+            new_image['sentids'].append(sentence_id_count)
+            raw_cap_list =  [meme['caption_text'].split(" | ")[0]]
             for sentence in raw_cap_list:
                 new_token = dict()
                 word_list = sentence.split(" ")
                 new_word_list = []
                 for i in word_list:
                     if len(i) > 0 and i != "w/" and "." not in i and i != ' ':
-                        new_word_list.append(i.strip("!"))
+                        temp = i
+                        temp_li = []
+                        if "\n" in i:
+                            temp_li = temp.split("\n")
+                            for l in temp_li:
+                                new_word_list.append(l.strip("!").strip("\n"))
+                        else:
+                            new_word_list.append(i.strip("!").strip("\n"))
                 new_token["tokens"] = new_word_list
+                new_token["raw"] = raw_cap_list[0]
+                new_token["imgid"] = img_counter
+                new_token["sentid"] = sentence_id_count
                 new_image["sentences"].append(new_token)
             if img_counter < 50:
                 new_image['split'] = "train"
@@ -37,6 +50,10 @@ def convert(file_path, file_ouptut_name):
                 else:
                     new_image['split'] = "test"
             new_image['filename'] = img['base_img']
+            sentence_id_count += 1
+            if meme_count == 0:
+                break
+
         img_counter += 1
         new_data['images'].append(new_image)
         if new_image['split'] == "train":

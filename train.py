@@ -365,24 +365,24 @@ if __name__ == '__main__':
 
 
     '''===for gridTD lrp cider'''
-    # parser = imgcap_gridTD_argument_parser()
-    # args = parser.parse_args()
-    # args.lrp_tune = True
-    # args.cider_tune = False
-    # args.finetune_encoder = True
-    # args.lrp_cider_tune = False
+    parser = imgcap_gridTD_argument_parser()
+    args = parser.parse_args()
+    args.lrp_tune = True
+    args.cider_tune = False
+    args.finetune_encoder = True
+    args.lrp_cider_tune = False
     # args.dataset = 'flickr30k'
     # args.resume = glob.glob('./output/gridTD/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch27*')[0]
-    # args.dataset = 'memes'
+    args.dataset = 'memes'
     # args.resume = glob.glob('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\memes\checkpoint_memes_epoch172lrp_cider_0.pth')[0]
     # args.resume = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]
-    # args.epochs = 100
+    args.epochs = 50
 
     ''' ===for aoa flickr30k cider==='''
-    parser = imgcap_aoa_argument_parser()
-    args = parser.parse_args()
-    args.dataset = 'memes'
-    args.epochs = 100
+    # parser = imgcap_aoa_argument_parser()
+    # args = parser.parse_args()
+    # args.dataset = 'memes'
+    # args.epochs = 50
     # args.resume = glob.glob('./output/aoa/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch22*')[0]
 
     ''' for gridTD coco'''

@@ -107,6 +107,7 @@ class EvaluationExperiments(object):
         relevance_imgs, relevance_previous_words = self.explainer.explain_caption(img_filepath)
         beam_caption_encoded = self.explainer.beam_caption_encode # this is a list with the encoded label of the predicted caption with <start>
         predicted_scores = self.explainer.predictions  # a tensor of (cap_length, vocab_size)
+        # print("predicted_scores: ", predicted_scores)
         assert len(beam_caption_encoded) - 1 == len(relevance_previous_words)
         sentence_length = len(beam_caption_encoded) - 1  # the first element of beam_caption-encoded is <start>
         # print(sentence_length)
@@ -143,7 +144,7 @@ class EvaluationExperiments(object):
                         new_idx = new_words.index(word_str)
                         beam_caption_img = ['<start>']+new_words[:new_idx]
                         beam_caption_encoded_img = [self.word_map[w] for w in beam_caption_img]
-                        # print(beam_caption_encoded_img)
+                        print(beam_caption_encoded_img)
                         new_predicted_scores = self.explainer.teacherforce_forward(image_modified, beam_caption_encoded_img)
                         assert new_predicted_scores.size(0) == new_idx + 1
                         new_w_img_score = torch.softmax(new_predicted_scores[-1], dim=-1)[word_t]
@@ -174,9 +175,9 @@ class EvaluationExperiments(object):
                         random_relevance = random_relevance.view(h,w)
                         mask = self.block_image(random_relevance)
                         image_modified_random = mask * image
-                        # plt.imshow(image_modified_random.permute(0,2,3,1).detach().cpu().numpy()[0])
-                        # plt.show()
-                        # caption_length_img = len(beam_caption_encoded[:t])
+                        plt.imshow(image_modified_random.permute(0,2,3,1).detach().cpu().numpy()[0])
+                        plt.show()
+                        caption_length_img = len(beam_caption_encoded[:t])
                         new_sentence_random, _ = self.explainer.model.beam_search(image_modified_random, self.explainer.word_map)
                         new_words_random = new_sentence_random[0].split()
                         print(new_words_random)
@@ -232,7 +233,9 @@ class EvaluationExperiments(object):
                             self.image_disappear_count_att.append([str(t), word_str])
                             print('img_disappear_att', self.image_disappear_count_att)
                 if t >= 6:
+                    print("t >= 6, 1")
                     if word_str in STOP_WORDS or single_key_flag:
+                        print("t >= 6, 2")
                         original_w_score = torch.softmax(predicted_scores[t], dim=-1)[word_t]
                         with torch.no_grad():
                             # here we perform the word ablation experiment

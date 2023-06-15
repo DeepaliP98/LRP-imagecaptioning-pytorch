@@ -15,9 +15,9 @@ class ImagecapDataset(Dataset):
         :param img_transformer: transform functions to transform the image
         '''
         if datasetname in ['coco2014','coco2017']:
-            min_word_freq = 4
+            min_word_freq = 1
         else:
-            min_word_freq = 4
+            min_word_freq = 1
         file_name = f'./dataset/{split}_imagecap_{datasetname}_5_cap_per_img_{min_word_freq}_min_word_freq.json'
         if not os.path.isfile(file_name):
             raise NotImplementedError(f'dataloader error: do not exist {file_name}')
