@@ -374,7 +374,7 @@ if __name__ == '__main__':
     # args.dataset = 'flickr30k'
     # args.resume = glob.glob('./output/gridTD/vgg16/flickr30k/BEST_checkpoint_flickr30k_epoch27*')[0]
     args.dataset = 'memes'
-    # args.resume = glob.glob('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\memes\checkpoint_memes_epoch172lrp_cider_0.pth')[0]
+    args.resume = glob.glob('E:\Data Science MSc\Q4\CV\LRP\LRP-imagecaptioning-pytorch\output\gridTD\\vgg16\memes\checkpoint_memes_epoch*')[0]
     # args.resume = glob.glob('./output/gridTD/vgg16/coco2017/BEST_checkpoint_coco2017_epoch22*')[0]
     args.epochs = 50
 

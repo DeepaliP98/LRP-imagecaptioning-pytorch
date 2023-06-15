@@ -935,7 +935,7 @@ class ExplainGridTDAttention(object):
 
     def get_hidden_parameters(self, img_filepath ):
         self.img = self.preprocess_img(img_filepath)  # (bs, C, H, W)
-        self.beam_caption, self.beam_caption_encode, seq = self.model.beam_search(self.img, self.word_map, beam_size=2,
+        self.beam_caption, self.beam_caption_encode= self.model.beam_search(self.img, self.word_map, beam_size=2,
                                                                              max_cap_length=50)
         self.beam_caption_encode = [self.word_map['<start>']] + self.beam_caption_encode
         print(f'the predicted caption of {img_filepath} is "{self.beam_caption[0]}"')

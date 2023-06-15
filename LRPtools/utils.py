@@ -171,7 +171,7 @@ def visuallize_attention(image, attention, reshape_size, upscale, cmap_type="sei
                                            multichannel=False)
     # print(atn.shape)
     # plt.imshow(atn)
-    # plt.show()
+    plt.show()
     cm = plt.get_cmap(cmap_type)
     atn_heatmap = cm(atn)
     # print(atn_heatmap[:,:,0])

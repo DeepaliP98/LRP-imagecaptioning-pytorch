@@ -233,9 +233,7 @@ class EvaluationExperiments(object):
                             self.image_disappear_count_att.append([str(t), word_str])
                             print('img_disappear_att', self.image_disappear_count_att)
                 if t >= 6:
-                    print("t >= 6, 1")
                     if word_str in STOP_WORDS or single_key_flag:
-                        print("t >= 6, 2")
                         original_w_score = torch.softmax(predicted_scores[t], dim=-1)[word_t]
                         with torch.no_grad():
                             # here we perform the word ablation experiment
@@ -804,7 +802,7 @@ def generate_evaluation_files(model_type='gridTD', explainer_type='lrp', head_id
         data_file = json.load(open('./dataset/test_imagecap_coco2017_5_cap_per_img_4_min_word_freq.json', 'r'))
         category_dict = json.load(open('./dataset/COCOvalEntities.json'))
     elif dataset == 'memes':
-        data_file = json.load(open('./dataset/test_imagecap_memes_5_cap_per_img_4_min_word_freq.json', 'r'))
+        data_file = json.load(open('./dataset/test_imagecap_memes_5_cap_per_img_1_min_word_freq.json', 'r'))
         print("meme here")
     else:
         data_file = json.load(open('./dataset/test_imagecap_flickr30k_5_cap_per_img_3_min_word_freq.json', 'r'))
@@ -1556,7 +1554,7 @@ if __name__ == '__main__':
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
     generate_evaluation_files('gridTD', explainer_type='lrp', dataset='memes', do_attention=True)
-    #generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='flickr30k', do_attention=False)
+    generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='memes', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)
