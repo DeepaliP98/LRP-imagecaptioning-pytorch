@@ -1554,7 +1554,7 @@ if __name__ == '__main__':
     os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
     generate_evaluation_files('gridTD', explainer_type='lrp', dataset='memes', do_attention=True)
-    generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='memes', do_attention=False)
+    # generate_evaluation_files('gridTD', explainer_type='GuidedGradCam', dataset='memes', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GradCam', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='GuidedGradient', dataset='flickr30k', do_attention=False)
     # generate_evaluation_files('gridTD', explainer_type='Gradient', dataset='flickr30k', do_attention=False)
